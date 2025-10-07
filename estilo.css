@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cardo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+body{
+    background-color:#ccc;
+    margin: 0px;
+}
+
+.header{
+    background-color: white;
+    display: flex;
+    justify-content:space-between;
+    padding: 15px 10%;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-around;
+}
+
+a{
+    padding: 8px 16px;
+    margin: 0px 8px;
+    color: black;
+    text-decoration: none;
+    border-radius: 10px;
+    font-family: 'bungee', cursive;
+
+    
+}
+
+#selecionado, #opcao:hover{
+    background-color: rgb(39, 146, 39);
+    color: white;
+}
+
+
+.section{
+    background-image: url(../img/programação.jpg);
+    color: white;
+    height: 80vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.conteudo{
+    background-color: white;
+    width:90%;
+    padding: 25px;
+    border-radius: 10px;
+    margin: 20px auto;
+    display: flex;
+    height: 70vh;
+}
+
+.jiboia h1 {
+  font-family: 'Caveat', cursive;
+}
+
+.jiboia p {
+  font-family: 'Caveat', serif;
+}
+
+.preco-destaque {
+  font-family: '', cursive;
+  font-size: 1.8rem; /* opcional: deixa mais chamativo */
+}
+
+
+
+
+#texto, #imagemdiv{
+    width: 50%;
+}
+
+#imagemdiv img{
+    width: 90%;
+    filter: brightness(60%);  
+    border-radius: 10px;
+    margin-top: px; 
+}
+
+.banner {
+    position: relative;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    width: 100%;
+    max-width: 3000px;
+    margin: 0 auto;
+    overflow: hidden; /* garante que o ::before e vídeo fiquem contidos */
+    background: none; /* remove o background-image */
+}
+
+/* ESCURECE O FUNDO SEM ESCURECER O TEXTO */
+:before  {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 0;
+    object-fit: cover;
+}
+
+.video-fundo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+
+.banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* AQUI ESCURECE */
+    z-index: 1;
+}
+
+
+
+/* TEXTO POR CIMA DO OVERLAY */
+.texto-banner {
+    position: relative;
+    z-index: 2; /* fica acima do ::before */
+}
+
+.texto-banner h1 {
+    font-size: 2.8rem;
+    color: #ffffff;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0); /* sombra forte para destacar */
+     /* opcional: fundo leve para reforçar contraste */
+    padding: 20px 30px;
+    border-radius: 10px;
+      font-family: 'Baloo 2', cursive;
+    font-size: 2.8rem;
+    color: #ffffff;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0);
+    padding: 20px 30px;
+    border-radius: 10px;
+}
+
+
+
+
+#titulo{
+    text-align: center;
+    padding-top: 2px;
+    font-family: 'bungee', cursive;
+    font-size: 2rem;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.produtos{
+    display: flex;
+    justify-content: space-around;
+}
+
+#card{
+    background-color: white;
+    margin: 0px 30px;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+#card img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+#texto-com-fundo {
+  position: relative;
+  width: 40%;
+}
+
+.fundo-tucano {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0.15;
+  z-index: 1;
+  pointer-events: none;
+}
+
+#texto-com-fundo #texto {
+  position: relative;
+  z-index: 2;
+  font-family: 'Caveat', cursive;
+}
+/* Aplica somente na segunda seção .conteudo */
+section.conteudo:nth-of-type(3) #imagemdiv img {
+  margin-top: 40px; /* ajuste aqui conforme a altura desejada */
+}
+
+/* Aplica apenas na parte do Tucano */
+section.conteudo:nth-of-type(3) #texto-com-fundo {
+  width: 60%; /* aumenta a largura da área do texto */
+}
+
+section.conteudo:nth-of-type(3) #texto-com-fundo #texto {
+  margin-top: 40px; /* desce apenas o texto */
+  font-size: 1.2rem; /* opcional: aumenta o tamanho da fonte */
+  line-height: 1.6;  /* melhora leitura */
+}
+
+/* Altera apenas o parágrafo do texto do tucano */
+section.tucano #texto-com-fundo #texto p {
+  width: 200%;          /* Aumenta a largura do parágrafo */
+  font-size: 1.3rem;    /* Aumenta o tamanho da fonte */
+  line-height: 1.7;     /* Melhora o espaçamento das linhas */
+  margin-top: 20px;     /* Desce o parágrafo */
+}
+
+.botao-comprar {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 25px;
+  background-color: rgb(39, 146, 39);
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  font-family: 'Bungee', cursive;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.botao-comprar:hover {
+  background-color: #2e9133;
+}
+
+/* Aplica a fonte 'Caveat' a títulos e parágrafos de todas as seções */
+.tucano h1,
+.tucano h2,
+.tucano p,
+.furão h1,
+.furão p,
+.axolote h1,
+.axolote p,
+.papagaio h1,
+.papagaio p,
+.porquinho h1,
+.porquinho p,
+.pogona h1,
+.pogona p,
+.teiu h1,
+.teiu p,
+.tartaruga h1,
+.tartaruga p {
+  font-family: 'Caveat', cursive;
+}
+
+
+ 
